@@ -14,3 +14,5 @@
 - yazi
 - lazygit
 - zsh with oh-my-zsh
+- fzf
+- fd
