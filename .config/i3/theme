@@ -1,0 +1,2 @@
+gaps inner 5px
+for_window [class="^.*"] border pixel 0
