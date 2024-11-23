@@ -1,6 +1,3 @@
-import = [
-"/home/highpingblorg/.config/alacritty/enfocado_dark.toml",
-]
 
 [font]
 normal = { family = "0xProtoNerdFontMono", style = "Regular" }
@@ -11,4 +8,9 @@ bindings = [
   { key = "V", mods = "Control", action = "Paste" },
   { key = "C", mods = "Control", action = "Copy" },
   { key = "C", mods = "Control|Shift", chars = "\u0003"}
+]
+
+[general]
+import = [
+"/home/highpingblorg/.config/alacritty/enfocado_dark.toml",
 ]
