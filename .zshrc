@@ -122,3 +122,4 @@ alias cat="bat -p"
 export TERM=xterm
 export LC_ALL=C
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+. /opt/asdf-vm/asdf.sh

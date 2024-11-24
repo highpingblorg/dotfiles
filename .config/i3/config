@@ -28,7 +28,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock -- i3lock 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -187,28 +187,56 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+#########
+# THEME #
+#########
+set $bg #181818
+set $black #252525
+set $br_black #3b3b3b
+set $white #777777
+set $fg #b9b9b9
+set $br_white #dedede
+
+set $red #ed4a46
+set $green #70b433
+set $yellow #dbb32d
+set $blue #368aeb
+set $magenta #eb6eb7
+set $cyan #3fc5b7
+set $orange #e67f43
+set $violet #a580e2
+
+set $br_red #ff5e56
+set $br_green #83c746
+set $br_yellow #efc541
+set $br_blue #4f9cfe
+set $br_magenta #ff81ca
+set $br_cyan #56d8c9
+set $br_orange #fa9153
+set $br_violet #b891f5
 
 bar {
     status_command i3status-rs /home/highpingblorg/.config/i3/i3status-rs/config.toml
     colors {
-        separator #666666
-        background #222222
-        statusline #dddddd
-        focused_workspace #0088CC #0088CC #ffffff
-        active_workspace #333333 #333333 #ffffff
-        inactive_workspace #333333 #333333 #888888
-        urgent_workspace #2f343a #900000 #ffffff
+      separator $blue
+      background $bg
+      statusline $br_white
+      focused_workspace $green $green $bg
+      active_workspace $cyan $blue $black
+      inactive_workspace $black $black $fg
+      urgent_workspace $yellow $yellow $black
     }
 }
 
-workspace 1 output "HDMI-A-0"
-workspace 3 output "HDMI-A-0"
-workspace 5 output "HDMI-A-0"
-workspace 7 output "HDMI-A-0"
+workspace 1 output "HDMI-1"
+workspace 3 output "HDMI-1"
+workspace 5 output "HDMI-1"
+workspace 7 output "HDMI-1"
 
-workspace 2 output "DisplayPort-1"
-workspace 4 output "DisplayPort-1"
-workspace 6 output "DisplayPort-1"
-workspace 8 output "DisplayPort-1"
+workspace 2 output "DP-2"
+workspace 4 output "DP-2"
+workspace 6 output "DP-2"
+workspace 8 output "DP-2"
 
-include /home/highpingblorg/.config/i3/theme
+gaps inner 5px
+for_window [class="^.*"] border pixel 1
